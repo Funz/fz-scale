@@ -1,0 +1,7 @@
+{
+    "uri": "sh://",
+    "n": 1,
+    "models": {
+        "Scale-xsdrnpm": "bash .fz/calculators/Scale-xsdrnpm.sh"
+    }
+}
