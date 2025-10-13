@@ -1,0 +1,7 @@
+{
+    "uri": "sh://",
+    "n": 1,
+    "models": {
+        "Scale-tsunami": "bash .fz/calculators/Scale-tsunami.sh"
+    }
+}

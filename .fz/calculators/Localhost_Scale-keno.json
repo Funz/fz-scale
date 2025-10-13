@@ -1,0 +1,7 @@
+{
+    "uri": "sh://",
+    "n": 1,
+    "models": {
+        "Scale-keno": "bash .fz/calculators/Scale-keno.sh"
+    }
+}

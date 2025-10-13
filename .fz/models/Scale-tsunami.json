@@ -1,0 +1,29 @@
+{
+    "id": "Scale-tsunami",
+    "varprefix": "&",
+    "formulaprefix": "@",
+    "delim": "()",
+    "commentline": "'",
+    "output": {
+        "mean_keff": "grep 'best estimate system k-eff' *.out | head -1 | awk '{for(i=1;i<=NF;i++) if($i==\"k-eff\") print $(i+1)}' 2>/dev/null || echo 1.0",
+        "sigma_keff": "grep 'best estimate system k-eff' *.out | head -1 | awk '{for(i=1;i<=NF;i++) if($i==\"-\") print $(i+1)}' 2>/dev/null || echo 0.001",
+        "mean_E_lethargy": "grep 'Energy of average lethargy of Fission' *.out | head -1 | awk '{print $7}' 2>/dev/null || echo 100",
+        "sigma_E_lethargy": "grep 'Energy of average lethargy of Fission' *.out | head -1 | awk '{print $10}' 2>/dev/null || echo 10",
+        "mean_nubar": "grep 'system nu bar' *.out | head -1 | awk '{print $4}' 2>/dev/null || echo 1.0",
+        "sigma_nubar": "grep 'system nu bar' *.out | head -1 | awk '{print $7}' 2>/dev/null || echo 0.001",
+        "mean_free_path": "grep 'system mean free path' *.out | head -1 | awk '{print $5}' 2>/dev/null || echo 1.0",
+        "sigma_free_path": "grep 'system mean free path' *.out | head -1 | awk '{print $8}' 2>/dev/null || echo 0.001",
+        "mean_sens_h1_total": "grep ' h-1          total' *.out | head -1 | awk '{print $3}' 2>/dev/null || echo 0.0001",
+        "sigma_sens_h1_total": "grep ' h-1          total' *.out | head -1 | awk '{print $5}' 2>/dev/null || echo 0.0001",
+        "mean_sens_h1_scatter": "grep ' h-1          scatter' *.out | head -1 | awk '{print $3}' 2>/dev/null || echo 0.0001",
+        "sigma_sens_h1_scatter": "grep ' h-1          scatter' *.out | head -1 | awk '{print $5}' 2>/dev/null || echo 0.0001",
+        "mean_sens_h1_capture": "grep ' h-1          capture' *.out | head -1 | awk '{print $3}' 2>/dev/null || echo 0.0001",
+        "sigma_sens_h1_capture": "grep ' h-1          capture' *.out | head -1 | awk '{print $5}' 2>/dev/null || echo 0.0001",
+        "mean_sens_u235_total": "grep ' u-235        total' *.out | head -1 | awk '{print $3}' 2>/dev/null || echo 0.0001",
+        "sigma_sens_u235_total": "grep ' u-235        total' *.out | head -1 | awk '{print $5}' 2>/dev/null || echo 0.0001",
+        "mean_sens_u235_fission": "grep ' u-235        fission' *.out | head -1 | awk '{print $3}' 2>/dev/null || echo 0.0001",
+        "sigma_sens_u235_fission": "grep ' u-235        fission' *.out | head -1 | awk '{print $5}' 2>/dev/null || echo 0.0001",
+        "mean_sens_u238_total": "grep ' u-238        total' *.out | head -1 | awk '{print $3}' 2>/dev/null || echo 0.0001",
+        "sigma_sens_u238_total": "grep ' u-238        total' *.out | head -1 | awk '{print $5}' 2>/dev/null || echo 0.0001"
+    }
+}
