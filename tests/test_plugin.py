@@ -23,7 +23,8 @@ def test_model_files():
     models = [
         ".fz/models/Scale-keno.json",
         ".fz/models/Scale-tsunami.json",
-        ".fz/models/Scale-xsdrnpm.json"
+        ".fz/models/Scale-xsdrnpm.json",
+        ".fz/models/Scale-shift.json"
     ]
     
     required_fields = ["id", "varprefix", "delim", "commentline", "output"]
@@ -57,7 +58,8 @@ def test_calculator_files():
     calculators = [
         ".fz/calculators/Localhost_Scale-keno.json",
         ".fz/calculators/Localhost_Scale-tsunami.json",
-        ".fz/calculators/Localhost_Scale-xsdrnpm.json"
+        ".fz/calculators/Localhost_Scale-xsdrnpm.json",
+        ".fz/calculators/Localhost_Scale-shift.json"
     ]
     
     for calc_file in calculators:
@@ -86,7 +88,8 @@ def test_calculator_scripts():
     scripts = [
         ".fz/calculators/Scale-keno.sh",
         ".fz/calculators/Scale-tsunami.sh",
-        ".fz/calculators/Scale-xsdrnpm.sh"
+        ".fz/calculators/Scale-xsdrnpm.sh",
+        ".fz/calculators/Scale-shift.sh"
     ]
     
     for script_file in scripts:
@@ -109,6 +112,7 @@ def test_example_files():
     
     examples = [
         "examples/Scale-keno/godiva.inp",
+        "examples/Scale-shift/godiva.inp",
         "examples/example_usage.py"
     ]
     

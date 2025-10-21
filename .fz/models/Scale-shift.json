@@ -1,0 +1,17 @@
+{
+    "id": "Scale-shift",
+    "varprefix": "&",
+    "formulaprefix": "@",
+    "delim": "()",
+    "commentline": "'",
+    "output": {
+        "mean_keff": "grep 'best estimate system k-eff' *.out | head -1 | awk '{for(i=1;i<=NF;i++) if($i==\"k-eff\") print $(i+1)}' 2>/dev/null || echo 1.0",
+        "sigma_keff": "grep 'best estimate system k-eff' *.out | head -1 | awk '{for(i=1;i<=NF;i++) if($i==\"-\") print $(i+1)}' 2>/dev/null || echo 0.001",
+        "mean_E_lethargy": "grep 'Energy of average lethargy of Fission' *.out | head -1 | awk '{print $7}' 2>/dev/null || echo 100",
+        "sigma_E_lethargy": "grep 'Energy of average lethargy of Fission' *.out | head -1 | awk '{print $10}' 2>/dev/null || echo 10",
+        "mean_nubar": "grep 'system nu bar' *.out | head -1 | awk '{print $4}' 2>/dev/null || echo 1.0",
+        "sigma_nubar": "grep 'system nu bar' *.out | head -1 | awk '{print $7}' 2>/dev/null || echo 0.001",
+        "mean_free_path": "grep 'system mean free path' *.out | head -1 | awk '{print $5}' 2>/dev/null || echo 1.0",
+        "sigma_free_path": "grep 'system mean free path' *.out | head -1 | awk '{print $8}' 2>/dev/null || echo 0.001"
+    }
+}
