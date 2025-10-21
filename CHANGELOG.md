@@ -2,6 +2,17 @@
 
 All notable changes to the fz-scale plugin will be documented in this file.
 
+## [Unreleased]
+
+### Added
+- Support for CSAS-Shift sequence (csas5-shift, csas6-shift)
+  - Scale-shift.json model definition for Shift Monte Carlo solver
+  - Scale-shift.sh calculator script for executing CSAS-Shift calculations
+  - Localhost_Scale-shift.json calculator configuration
+  - Godiva example input file using csas6-shift
+  - Documentation and usage examples for CSAS-Shift in README.md
+- Enhanced test suite to validate Scale-shift model and calculator
+
 ## [1.0.0] - 2025-01-13
 
 ### Added
