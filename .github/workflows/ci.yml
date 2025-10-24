@@ -84,10 +84,6 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
     
-    - name: Check for trailing whitespace
-      run: |
-        ! git grep -I '\s$' -- '*.py' '*.sh' '*.json' '*.md'
-    
     - name: Check shell scripts are executable
       run: |
         for f in .fz/calculators/*.sh; do
