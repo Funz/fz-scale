@@ -56,10 +56,7 @@ def test_calculator_files():
     print("Testing calculator configuration files...")
     
     calculators = [
-        ".fz/calculators/Localhost_Scale-keno.json",
-        ".fz/calculators/Localhost_Scale-tsunami.json",
-        ".fz/calculators/Localhost_Scale-xsdrnpm.json",
-        ".fz/calculators/Localhost_Scale-shift.json"
+        ".fz/calculators/localhost_scale.json"
     ]
     
     for calc_file in calculators:
@@ -149,7 +146,7 @@ def test_with_fz():
             )
             
             # Check compiled file exists
-            compiled_file = os.path.join(tmpdir, "godiva.inp")
+            compiled_file = os.path.join(tmpdir, "r=8.741" ,"godiva.inp")
             assert os.path.exists(compiled_file), "Compiled file not created"
             
             # Check variable was substituted
