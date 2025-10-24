@@ -67,7 +67,7 @@ jobs:
         import os
         with tempfile.TemporaryDirectory() as tmpdir:
             fz.fzc('examples/Scale-keno/godiva.inp', {'r': 8.741}, 'Scale-keno', output_dir=tmpdir)
-            compiled = os.path.join(tmpdir, 'godiva.inp')
+            compiled = os.path.join(tmpdir, 'r=8.741', 'godiva.inp')
             assert os.path.exists(compiled), 'Compiled file not created'
             with open(compiled) as f:
                 content = f.read()
