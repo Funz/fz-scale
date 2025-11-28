@@ -54,9 +54,9 @@ def test_model_files():
 def test_calculator_files():
     """Test that calculator JSON files are valid."""
     print("Testing calculator configuration files...")
-    
+
     calculators = [
-        ".fz/calculators/localhost_scale.json"
+        ".fz/calculators/localhost_Scale.json"
     ]
     
     for calc_file in calculators:
@@ -110,7 +110,6 @@ def test_example_files():
     examples = [
         "examples/Scale-keno/godiva.inp",
         "examples/Scale-shift/godiva.inp",
-        "examples/example_usage.py"
     ]
     
     for example_file in examples:

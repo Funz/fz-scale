@@ -2,7 +2,7 @@
     "id": "Scale-xsdrnpm",
     "varprefix": "&",
     "formulaprefix": "@",
-    "delim": "()",
+    "delim": "{}",
     "commentline": "'",
     "output": {
         "lambda": "grep 'lambda' out.txt | head -1 | awk '{for(i=1;i<=NF;i++) if($i==\"lambda\") print $(i+1)}' 2>/dev/null"

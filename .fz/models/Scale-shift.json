@@ -2,7 +2,7 @@
     "id": "Scale-shift",
     "varprefix": "&",
     "formulaprefix": "@",
-    "delim": "()",
+    "delim": "{}",
     "commentline": "'",
     "output": {
         "mean_keff": "grep 'best estimate system k-eff' *.out | head -1 | tr -s '[:space:]' | cut -d ' ' -f7",
